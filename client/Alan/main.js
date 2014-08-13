@@ -1,6 +1,8 @@
 /**
  * Created by Allanz on 24/04/2014.
  */
+ var show = false;
+
 data = function(){
     var email = $("#email").val();
     var nombre = $("#name").val();
@@ -27,4 +29,14 @@ data = function(){
         );
 
     }
+};
+
+menu = function(){
+  if (show){
+    $("nav").fadeOut("slow");
+    $("#menuBtn").fadeIn("fast");
+  }else{
+    $("#menuBtn").fadeOut("fast");
+    $("nav").fadeIn("slow");
+  }
 };
