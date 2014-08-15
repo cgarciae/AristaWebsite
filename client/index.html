@@ -1,16 +1,17 @@
 <body>
   <section id = "dotSection">
-    <img src="images/Barra.png" alt="" />
-    <figure class = "dots" id = "selectedPage1"></figure>
-    <figure class = "dots" id = "selectedPage2"></figure>
-    <figure class = "dots" id = "selectedPage3"></figure>
-    <figure class = "dots" id = "selectedPage4"></figure>
-    <figure class = "dots" id = "selectedPage5"></figure>
+    <img src="images/BarraNS.png" alt="" />
+    <figure onclick="dotNavigation()" class = "dots selected" id = "selectedPage1"></figure>
+    <figure onclick="dotNavigation()" class = "dots" id = "selectedPage2"></figure>
+    <figure onclick="dotNavigation()" class = "dots" id = "selectedPage3"></figure>
+    <figure onclick="dotNavigation()" class = "dots" id = "selectedPage4"></figure>
+    <figure onclick="dotNavigation()" class = "dots" id = "selectedPage5"></figure>
   </section>
   <section id = "menu">
     <article id = "menuBtn" onclick="menu()"><div id="burger">&#9776;</div> MENÚ</article>
     <nav id = "slideshow-nav">
       <ul>
+        <li onclick="menu()" id = "close"><img src="images/xNS.png" alt="" /></li>
         <li><a href="#intro">Intro</a></li>
         <li><a href="#Page2">Page 2</a></li>
         <li><a href="#Page3">Page 3</a></li>
@@ -23,11 +24,10 @@
   <section id="canvas"></section>
 
   <div id="slides">
+
     <div id="intro" data-slidr="intro" class="slideElem">
-      <section id="tituloHG">
-        <h1 id="centerTitle">
-          HG <span>INNOVACION</span>
-        </h1>
+      <section id="arista">
+        <img src="images/AristaNS.png" id="aristaImg" alt="" />
       </section>
     </div>
 
@@ -40,5 +40,6 @@
         <button onclick="data()">Enviar</button>
       </section>
     </div>
+
   </div>
 </body>
