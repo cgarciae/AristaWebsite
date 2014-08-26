@@ -3,7 +3,7 @@ dt = 0.75s
 body
   margin 0
   padding 0
-  background: #232A67;
+  background: #283872;
   transition: background dt linear;
   -webkit-transition: background dt linear;
   -moz-transition: background dt linear;
@@ -97,9 +97,6 @@ body
   display: flex
   position relative
 
-#formulario
-  margin auto
-
 #tituloHG
   margin auto
   border-radius .5em
@@ -145,3 +142,49 @@ aside[id="slides-control"] .slidr-control.left
   flex-direction row
   justify-content center
   align-items center
+#registro
+  display flex !important
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  .titleRegister
+    display inline-block
+    background-color #d3d2d1
+    border-bottom solid #5AB3D2
+    padding 5px
+    figcaption
+      font-size 16pt
+  .benefits
+    width 450px
+    color #FFF
+    list-style-image: url('images/dots.png');
+    .singleBenefit
+      margin 3px 0
+  #sendMessage
+    display: flex;
+    flex-direction: column;
+    .campo
+      width 450px
+      display block
+      padding 5px 0
+      margin 5px 0
+    #registrar
+      text-align center
+      color #E3E559
+      font-weight bold
+      border solid #E3E559
+      border-radius 15px
+      margin: 10px auto;
+      padding 5px
+      cursor pointer
+    #registrar:hover
+      background-color #E3E559
+      color #FFF
+  #aristaBottom
+    display: flex;
+    background-color: #221942;
+    width: inherit;
+    height: 20%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
