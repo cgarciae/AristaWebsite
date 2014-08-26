@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(http://fonts.googleapis.com/css?family=Arimo:400,700);
 dt = 0.75s
 body
   margin 0
@@ -135,6 +136,9 @@ aside[id="slides-control"] .slidr-control.left
 .slidr-control.up
   display: none !important
 
+.slidr-control.down
+  display: none !important
+
 #arista
   height 100%
   width 100%
@@ -151,24 +155,36 @@ aside[id="slides-control"] .slidr-control.left
     display inline-block
     background-color #d3d2d1
     border-bottom solid #5AB3D2
-    padding 5px
+    padding 5px 40px
+    font-family: 'Open Sans Condensed', sans-serif;
     figcaption
-      font-size 16pt
+      font-size 17pt
   .benefits
-    width 450px
+    width 350px
     color #FFF
     list-style-image: url('images/dots.png');
+    font-family: 'Arimo', sans-serif;
+    font-size 10pt
     .singleBenefit
-      margin 3px 0
+      margin 8px 0
   #sendMessage
     display: flex;
     flex-direction: column;
     .campo
-      width 450px
+      font-family: 'Arimo', sans-serif;
+      font-size 11pt
+      width 350px
       display block
-      padding 5px 0
+      padding 5px
       margin 5px 0
+      border none
+      border-top solid #5AB3D2
+      border-left solid #5AB3D2
+    .campo::-webkit-input-placeholder
+      color #000
     #registrar
+      font-family: 'Arimo', sans-serif;
+      font-size 17pt
       text-align center
       color #E3E559
       font-weight bold
