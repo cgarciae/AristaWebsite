@@ -1,13 +1,12 @@
 <body>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>*
   <section id = "dotSection">
     <img src="images/BarraNS.png" alt="" />
     <figure onclick="dotNavigation()" class = "dots selected" id = "selectedPage1"></figure>
     <figure onclick="dotNavigation()" class = "dots" id = "selectedPage2"></figure>
     <figure onclick="dotNavigation()" class = "dots" id = "selectedPage3"></figure>
-    <figure onclick="dotNavigation()" class = "dots" id = "selectedPage4"></figure>
-    <figure onclick="dotNavigation()" class = "dots" id = "selectedPage5"></figure>
   </section>
-  <section id = "menu">
+  <!-- <section id = "menu">
     <article id = "menuBtn" onclick="menu()"><div id="burger">&#9776;</div> MENÚ</article>
     <nav id = "slideshow-nav">
       <ul>
@@ -19,7 +18,7 @@
         <li><a href="#registro">Registro</a></li>
       </ul>
     </nav>
-  </section>
+  </section> -->
 
   <section id="canvas"></section>
 
@@ -32,13 +31,29 @@
     </div>
 
     <div id="registro" data-slidr="registro" class="slideElem">
-      <section id="formulario">
-        <div class="campo"><label for=""></label><input id="name" type="text" placeholder="Nombre" name="name"/></div>
-        <div class="campo"><label for=""></label><input id="lastname" type="text" placeholder="Apellido" name="lastname"/></div>
-        <div class="campo"><label for=""></label><input id="email" type="email" placeholder="Email" name="email"/></div>
-        <div class="campo"><label for=""></label><input id="company" type="text" placeholder="Empresa" name="company"/></div>
-        <button onclick="data()">Enviar</button>
+
+      <figure class="titleRegister">
+        <figcaption>Por tu registro obtendrás estos beneficios</figcaption>
+      </figure>
+
+      <ul class="benefits">
+        <li class="singleBenefit">Recibir un portafolio en tu correo</li>
+        <li class="singleBenefit">Primicias sobres cambios y mejoras de nuestros servicios</li>
+        <li class="singleBenefit">Contenido experimental sobre las aplicaciones de la realidad aunmentada en el marketing</li>
+      </ul>
+
+      <section id="sendMessage">
+        <input class="campo" id="name" type="text" placeholder="Nombre*" name="name"/>
+        <input class="campo" id="lastname" type="text" placeholder="Apellido*" name="lastname"/>
+        <input class="campo" id="email" type="email" placeholder="Email*" name="email"/>
+        <input class="campo" id="company" type="text" placeholder="Empresa*" name="company"/>
+        <figure id="registrar" onclick="data()">REGÍSTRATE</figure>
       </section>
+
+      <section id="aristaBottom">
+        <img src="images/AristaNS.png" id="aristaImg" alt="" />
+      </section>
+
     </div>
 
   </div>
