@@ -218,7 +218,7 @@ Meteor.startup( function(){
           $("#selectedPage3").removeClass("selected");
           $("#selectedPage4").removeClass("selected");
           $("#selectedPage5").removeClass("selected");
-          window.location.href = "#intro"
+          window.location.href = "#home"
           break;
       case "selectedPage2":
           $("#selectedPage2").addClass("selected");
@@ -226,7 +226,7 @@ Meteor.startup( function(){
           $("#selectedPage3").removeClass("selected");
           $("#selectedPage4").removeClass("selected");
           $("#selectedPage5").removeClass("selected");
-          window.location.href = "#registro"
+          window.location.href = "#information"
           break;
       case "selectedPage3":
           $("#selectedPage3").addClass("selected");
@@ -234,7 +234,7 @@ Meteor.startup( function(){
           $("#selectedPage1").removeClass("selected");
           $("#selectedPage4").removeClass("selected");
           $("#selectedPage5").removeClass("selected");
-          window.location.href = "#registro"
+          window.location.href = "#why"
           break;
       case "selectedPage4":
           $("#selectedPage4").addClass("selected");
@@ -242,7 +242,7 @@ Meteor.startup( function(){
           $("#selectedPage3").removeClass("selected");
           $("#selectedPage1").removeClass("selected");
           $("#selectedPage5").removeClass("selected");
-          window.location.href = "#registro"
+          window.location.href = "#experiences"
           break;
       case "selectedPage5":
           $("#selectedPage5").addClass("selected");
@@ -250,7 +250,7 @@ Meteor.startup( function(){
           $("#selectedPage3").removeClass("selected");
           $("#selectedPage4").removeClass("selected");
           $("#selectedPage1").removeClass("selected");
-          window.location.href = "#registro"
+          window.location.href = "#register"
           break;
       default:
           console.log("Weird error bro!");
