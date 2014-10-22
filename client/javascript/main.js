@@ -11,16 +11,6 @@ Meteor.startup( function(){
     function onSlideChange(event) {
         "use strict";
         console.log(event.in.slidr);
-        // switch (event.in.slidr) {
-        //
-        // case "registro":
-        //     document.body.style.backgroundColor = '#60CEC5';
-        //     break;
-        // case "intro":
-        //     document.body.style.backgroundColor = '#EEEEEE';
-        //     break;
-        // default:
-        // }
     }
 
     sl = slidr.create('slides', {
@@ -37,135 +27,6 @@ Meteor.startup( function(){
         touch: true,
         transition: 'linear'
     }).start();
-
-    /////////////////////////////
-    ///////    Two      ////////
-    ///////////////////////////
-
-    var canvasContainer = document.querySelector("#canvas");
-
-    // Make an instance of two and place it on the page.
-    var params = {
-        width: window.innerWidth,
-        height: window.innerHeight,
-        type: Two.Types.svg
-    };
-    scene = new Two(params).appendTo(canvasContainer);
-
-      ////////////////////////////////////////
-     ////////    Start      /////////////////
-    ////////////////////////////////////////
-
-    lines = scene.makeGroup();
-    nodes = scene.makeGroup();
-
-    //twoScene.add(lines,nodes);
-
-    nodes = [
-        {
-            x: 300, y: 300,
-            edges: []
-        },
-        {
-            x: 100, y: 100,
-            edges: []
-        },
-        {
-            x: 100, y: 400,
-            edges: []
-        },
-        {
-            x: 500, y: 150,
-            edges: []
-        }
-    ];
-
-    nodes = Grafo.prototype.kNearest( 15, 1 );
-
-    grafo = new Grafo( nodes, scene );
-
-    grafo.setStaticNodesInScreenEdges();
-
-    scene.update();
-
-    //////////////////////////////////////////
-    /////////    Canvas Events      /////////
-    ////////////////////////////////////////
-
-    var canvas = document.querySelector('body');
-
-    function mouseEvent(evt) {
-      var mousePos = getMousePos(canvas, evt);
-      mouseForce( mousePos, grafo );
-    }
-
-    canvas.addEventListener('mousemove', mouseEvent , false);
-
-    //////////////////////////////////////////
-    /////////    Simulate      //////////////
-    ////////////////////////////////////////
-
-    simulating = true;
-
-    var lag = 0, nonSimulationStart, bufferStart = new Date();
-
-    grafo.update();
-    grafo.render();
-    scene.update();
-    grafo.render();
-    scene.update();
-
-    animate = true;
-    n = 0;
-
-    startAnimation = function() {
-      nonSimulationStart = new Date();
-      bufferStart = new Date();
-      control();
-    }
-
-    control = function () {
-      if (animate) {
-        startTime = new Date();
-        bufferStart = new Date();
-        setTimeout(input, 0);
-      }
-    }
-
-    //Input
-    function input () {
-
-        //Proceed to update
-        setTimeout(update, 0)
-    }
-
-    //Update
-    function update() {
-      grafo.update((new Date() - nonSimulationStart)/1000);
-      window.requestAnimationFrame(render);
-      //console.log((new Date() - nonSimulationStart)/1000);
-      nonSimulationStart = new Date();
-    }
-
-    function render () {
-      grafo.render();
-      scene.update();
-      setTimeout(control, Math.max( 0, FPS - (new Date() - bufferStart) ) );
-    }
-
-    startAnimation();
-
-    document.addEventListener('visibilitychange', function(event) {
-
-        if (document.visibilityState === "hidden") {
-            // The page is hidden.
-            animate = false;
-        } else if (document.visibilityState === "visible") {
-            // The page is visible.
-            animate = true;
-            startAnimation();
-        }
-    });
 
     /**
      * Created by Allanz on 24/04/2014.
@@ -197,18 +58,30 @@ Meteor.startup( function(){
     }
   };
 
-  var show = false;
-  menu = function(){
-    if (show){
-      $("nav").fadeOut("fast");
-      $("#menuBtn").fadeIn("slow");
-      show = false;
-    }else{
-      $("#menuBtn").fadeOut("fast");
-      $("nav").fadeIn("slow");
-      show = true;
+  project = function(){
+    switch(event.currentTarget.id) {
+      case "project1":
+        $("#projectImg").attr("src","images/project1.png");
+        $("#projectName").html("Campus EAFIT");
+        $("#projectContent").html("Campus EAFIT es una aplicacion sencilla que demuestra el poder de la Realidad Aumentada de mostrar lo que otros medios no pueden, esto es, información tridimensional sobre estructuras reales. Con esta aplicaciones el usuario puede explorar la Universidad EAFIT desde cualquier ángulo con RA, e interactuar con los edificios mediante gestos para explorarlos con más detalle. Una versión anterior de Campus EAFIT fue demostrada en Virtual Educa (Panamá).");
+        $("#logoOwner").attr("src","images/eafit.png");
+        break;
+      case "project2":
+        $("#projectImg").attr("src","images/project2.png");
+        $("#projectName").html("D-Tech");
+        $("#projectContent").html("Durante el evento de EXPO Camacol 2012 se realizó un acompañamiento  experiencial para los visitantes del stand de Cerámica Italia; éste consistía en la transmisión a dos pantallas grandes de una casa mágica. Esta casa se armaba con fichas que hacían a su vez parte del folleto que más tarde quedaría de souvenir y portafolio para los clientes. La magia estaba en que cada parte de la casa (baño, sala-comedor, alcoba, cocina, patio) permitía en forma de RA cambiar en tiempo real al modelo la cerámica que más le gustase al visitante en cada ambiente según la colección actual de la empresa, D-Tech. Esta experiencia tuvo una gran acogida con descargas post evento de hasta 100 diarias en iOS.");
+        $("#logoOwner").attr("src","images/italia.png");
+        break;
+      case "project3":
+        $("#projectImg").attr("src","images/project3.png");
+        $("#projectName").html("Foro de la Moda");
+        $("#projectContent").html("Inexmoda tenía una preocupación con un subevento llamado el Foro de la Moda, que en años anteriores no habia tenido mayor acogida; pero debido a su nivel informativo querían darle mayor flujo de personas. La Realidad Aumentada desarrollada para el evento no solo aumentó considerablemente el tráfico de personas en el lugar si no en redes sociales. De nuevo con el concepto de souvenir, se tomaba una foto con la bolsa que cada persona tenía desde la entrada y con transmisión por AirPlay de video se veía cómo la bolsa se “encantaba” con elementos Vintage, de acuerdo al concepto definido para ésta feria.");
+        $("#logoOwner").attr("src","images/inexmoda.png");
+        break;
+      default:
+          console.log("Weird error bro!");
     }
-  };
+  }
 
   dotNavigation = function(){
     switch(event.currentTarget.id) {
