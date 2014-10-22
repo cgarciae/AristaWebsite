@@ -1,57 +1,259 @@
 <body>
-<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>*
-  <section id = "dotSection">
-    <img src="images/BarraNS.png" alt="" />
-    <figure onclick="dotNavigation()" class = "dots selected" id = "selectedPage1"></figure>
-    <figure onclick="dotNavigation()" class = "dots" id = "selectedPage2"></figure>
-    <figure onclick="dotNavigation()" class = "dots" id = "selectedPage3"></figure>
-  </section>
-  <!-- <section id = "menu">
-    <article id = "menuBtn" onclick="menu()"><div id="burger">&#9776;</div> MENÚ</article>
-    <nav id = "slideshow-nav">
-      <ul>
-        <li onclick="menu()" id = "close"><img src="images/xNS.png" alt="" /></li>
-        <li><a href="#intro">Intro</a></li>
-        <li><a href="#Page2">Page 2</a></li>
-        <li><a href="#Page3">Page 3</a></li>
-        <li><a href="#Page4">Page 4</a></li>
-        <li><a href="#registro">Registro</a></li>
-      </ul>
-    </nav>
-  </section> -->
-
-  <section id="canvas"></section>
+<link href=
+  'http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700'
+  rel='stylesheet' type='text/css'>
 
   <div id="slides">
 
-    <div id="intro" data-slidr="intro" class="slideElem">
-      <section id="arista">
-        <img src="images/AristaNS.png" id="aristaImg" alt="" />
+    <div id="home" data-slidr="home" class="slideElem">
+      <section id="aristaLogo">
+        <img src="images/AristaLogo.png" id="aristaImg" alt="" />
+      </section>
+      <section class="aristaInfo">
+        <h2>DESCARGA NUESTRO DEMO</h2>
+        <figure class = "appBadges">
+          <img src="images/googlePlay.png" alt="">
+          <img src="images/appStore2.png" alt="">
+        </figure>
+        <figure class="buttons">
+          <article class="descargaMarcador">Marcador</article>
+          <article class="descargarPortafolio">Portafolio</article>
+        </figure>
       </section>
     </div>
 
-    <div id="registro" data-slidr="registro" class="slideElem">
-
-      <figure class="titleRegister">
-        <figcaption>Por tu registro obtendrás estos beneficios</figcaption>
-      </figure>
-
-      <ul class="benefits">
-        <li class="singleBenefit">Recibir un portafolio en tu correo</li>
-        <li class="singleBenefit">Primicias sobres cambios y mejoras de nuestros servicios</li>
-        <li class="singleBenefit">Contenido experimental sobre las aplicaciones de la realidad aunmentada en el marketing</li>
-      </ul>
-
-      <section id="sendMessage">
-        <input class="campo" id="name" type="text" placeholder="Nombre*" name="name"/>
-        <input class="campo" id="lastname" type="text" placeholder="Apellido*" name="lastname"/>
-        <input class="campo" id="email" type="email" placeholder="Email*" name="email"/>
-        <input class="campo" id="company" type="text" placeholder="Empresa*" name="company"/>
-        <figure id="registrar" onclick="data()">REGÍSTRATE</figure>
+    <div id="information" data-slidr="information" class="slideElem">
+      <section class = "dotSection">
+        <figure class="dotsContent">
+          <img onclick="dotNavigation()" src="images/dotsB.png" alt=""
+            class="dots" id="selectedPage1">
+          <img onclick="dotNavigation()" src="images/dotsB.png" alt=""
+            class="dots selected" id="selectedPage2">
+          <img onclick="dotNavigation()" src="images/dotsB.png" alt=""
+            class="dots" id="selectedPage3">
+          <img onclick="dotNavigation()" src="images/dotsB.png" alt=""
+            class="dots" id="selectedPage4">
+          <img onclick="dotNavigation()" src="images/dotsB.png" alt=""
+            class="dots" id="selectedPage5">
+        </figure>
       </section>
 
-      <section id="aristaBottom">
-        <img src="images/AristaNS.png" id="aristaImg" alt="" />
+      <h1 class="title">REALIDAD AUMENTADA Y VIRTUAL</h1>
+      <figure class="info">
+        <img src="images/square.png" alt="">
+        <figcaption>ARISTA Construcción es una experiencia de apoyo, confianza
+          y seguridad para acelerar la decisión de compra de tus clientes,
+          mediante una suite de aplicaciones para Android e iOS, integrados
+          directamente en ARISTA RA que incluye realidad aumentada y virtual,
+          esto le permite al usuario explorar tus inmuebles en cualquier
+          dispositivo móvil con RA o virtual, e interactuar con contenidos
+          multimedia (textos e imágenes administrables desde web) logrando
+          obtener más información sobre el producto.
+        </figcaption>
+      </figure>
+      <section class="app">
+        <figure class="titleContent">
+          <h2>Aplicación móvil</h2>
+        </figure>
+        <img src="images/app.png" alt="">
+        <p>Para canalizar la emoción que genera la experiencia RA, ARISTA
+          provee una interfaz gráfica administrable que ayudará a cerrar el
+          proceso de compra con las siguientes características:
+        </p>
+        <ul class="features">
+          <li class="feature">Información de interés</li>
+          <li class="feature">Actualizaciones del proyecto</li>
+          <li class="feature">Imágenes</li>
+          <li class="feature">Mapa del sector</li>
+          <li class="feature">Calculadora de precios</li>
+          <li class="feature">Información sobre modalidades de crédito</li>
+          <li class="feature">Registro</li>
+          <li class="feature">Contacto con tu empresa</li>
+        </ul>
+      </section>
+      <section class="web">
+        <figure class="titleContent">
+          <h2>Plataforma web</h2>
+        </figure>
+        <img src="images/web.png" alt="">
+        <article>
+          <p>Aplicación web donde puedes subir, eliminar o modificar tus
+            contenidos y asi poder mejorar la experiencia del usuario como:
+          </p>
+          <ul class="features">
+            <li>Informar sobre el progreso del proyecto</li>
+            <li>Visualizar la información de los clientes registrados</li>
+            <li>Obtener el contacto de los usuarios</li>
+            <li>Ofrecer modalidades de financiación</li>
+            <li>Ver estadísticas de uso</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="footer">
+        <img class= "nameImg" src="images/Nombre-Arista.png" alt="">
+      </section>
+    </div>
+
+    <div id="why" data-slidr= "why" class="slideElem">
+      <section class = "dotSection">
+        <figure class="dotsContent">
+          <img onclick="dotNavigation()" src="images/dotsB.png" alt=""
+            class="dots" id="selectedPage1">
+          <img onclick="dotNavigation()" src="images/dotsB.png" alt=""
+            class="dots" id="selectedPage2">
+          <img onclick="dotNavigation()" src="images/dotsB.png" alt=""
+            class="dots selected" id="selectedPage3">
+          <img onclick="dotNavigation()" src="images/dotsB.png" alt=""
+            class="dots" id="selectedPage4">
+          <img onclick="dotNavigation()" src="images/dotsB.png" alt=""
+            class="dots" id="selectedPage5">
+        </figure>
+      </section>
+
+      <h1 class="title">¿POR QUÉ ARISTA?</h1>
+
+      <section class="reasons">
+        <figure class="reason">
+          <img src="images/shopping.png" alt="">
+          <figcaption class="reasonTitle">Experiencia de compra</figcaption>
+          <figcaption class="reasonContent">Exita los sentidos de tus clientes
+            mientras conocen tu producto a través de su propio dispositivo móvil
+            [en la comodidad de su casa o en tu sala de ventas].
+          </figcaption>
+        </figure>
+        <figure class="reason">
+          <img src="images/quality.png" alt="">
+          <figcaption class="reasonTitle">Calidad de información</figcaption>
+          <figcaption class="reasonContent">Le brinda a tu cliente toda la
+            información que necesita en cualquier momento para ayudarle a
+            tomar la decisión de compra.
+          </figcaption>
+        </figure>
+        <figure class="reason">
+          <img src="images/channel.png" alt="">
+          <figcaption class="reasonTitle">Un nuevo canal</figcaption>
+          <figcaption class="reasonContent">Lleva tu producto más allá de la
+            sala de ventas y comparte una experiencia interactiva con miles de
+            usuarios.
+          </figcaption>
+        </figure>
+        <figure class="reason">
+          <img src="images/market.png" alt="">
+          <figcaption class="reasonTitle">Acceso a mercados jóvenes</figcaption>
+          <figcaption class="reasonContent">Evoluciona tu marca al asociarla
+            con el mundo digital y móvil, experiencias personalizadas de alta
+            calidad y excelentes servicios.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="video">
+        <iframe width="560" height="315"
+          src="//www.youtube.com/embed/w0Uk-u_hZ3M" frameborder="0"
+          allowfullscreen>
+        </iframe>
+        <div class="greyZone">
+          <p>Augmented Reality for Real Estate a few examples</p>
+        </div>
+      </section>
+
+      <section class="footer">
+        <img class= "nameImg" src="images/Nombre-Arista.png" alt="">
+      </section>
+    </div>
+
+    <div id="experiences" data-slidr="experiences" class="slideElem">
+      <section class = "dotSection">
+        <figure class="dotsContent">
+          <img  onclick="project()" src="images/dotsB.png" alt=""
+            class="dots" id="selectedPage1">
+          <img onclick="dotNavigation()" src="images/dotsB.png" alt=""
+            class="dots" id="selectedPage2">
+          <img onclick="dotNavigation()" src="images/dotsB.png" alt=""
+            class="dots" id="selectedPage3">
+          <img onclick="dotNavigation()" src="images/dotsB.png" alt=""
+            class="dots selected" id="selectedPage4">
+          <img onclick="dotNavigation()" src="images/dotsB.png" alt=""
+            class="dots" id="selectedPage5">
+        </figure>
+      </section>
+
+      <h1 class="title">PROYECTOS REALIZADOS</h1>
+
+      <ul class="projectSelector">
+        <li id="project1" onclick="project()"><img src="images/eafit.png" alt=""></li>
+        <li id="project2" onclick="project()"><img src="images/italia.png" alt=""></li>
+        <li id="project3" onclick="project()"><img src="images/inexmoda.png" alt=""></li>
+      </ul>
+
+      <figure class="projectInfo">
+        <img id= "projectImg" src="images/project1.png" alt="">
+        <figcaption class="projectDetail">
+          <h2 id= "projectName">Campus EAFIT</h2>
+          <p id= "projectContent">
+            Campus EAFIT es una aplicacion sencilla que demuestra el poder de la
+            Realidad Aumentada de mostrar lo que otros medios no pueden, esto es,
+            información tridimensional sobre estructuras reales. Con esta
+            aplicaciones el usuario puede explorar la Universidad EAFIT desde
+            cualquier ángulo con RA, e interactuar con los edificios mediante
+            gestos para explorarlos con más detalle. Una versión anterior de
+            Campus EAFIT fue demostrada en Virtual Educa (Panamá).
+          </p>
+          <img src="images/eafit.png" alt="" id="logoOwner">
+        </figcaption>
+      </figure>
+
+      <h1 class="title title2">ALIADOS</h1>
+
+      <p class= "aliadosContent">
+        Inexmoda tenía una preocupación con un subevento llamado el Foro de la
+        Moda, que en años anteriores no habia tenido mayor acogida; pero
+        debido a su nivel informativo querían darle mayor flujo de personas.
+        La Realidad Aumentada desarrollada para el evento no solo aumentó
+        considerablemente el tráfico de personas en el lugar si no en redes
+        sociales. De nuevo con el concepto de souvenir, se tomaba una foto con
+        la bolsa que cada persona tenía desde la entrada y con transmisión por
+        AirPlay de video se veía cómo la bolsa se “encantaba” con elementos
+        Vintage, de acuerdo al concepto definido para ésta feria.
+      </p>
+
+      <section class="footer">
+        <img class= "nameImg" src="images/Nombre-Arista.png" alt="">
+      </section>
+    </div>
+
+    <div id="register" data-slidr="register" class="slideElem">
+
+      <figure class="titleRegister">
+        <figcaption>Contáctanos para tus proyectos</figcaption>
+      </figure>
+
+      <form id="sendMessage">
+        <input class="campo" id="name" type="text" placeholder="Nombre completo" name="name" required/>
+        <input class="campo" id="email" type="email" placeholder="Email" name="email" required/>
+        <input class="campo" id="company" type="text" placeholder="Empresa" name="company" required/>
+
+        <ul class="benefits">
+          <li class="singleBenefit">Recibe primicias sobre mejoras de nuestros
+            servicios y contenido experimental sobre realidad aumentada.
+          </li>
+        </ul>
+
+        <figure id="registrar" onclick="data()">REGÍSTRATE</figure>
+      </form>
+
+      <figure class = "appBadges">
+        <img src="images/googlePlay.png" alt="">
+        <img src="images/appStore2.png" alt="">
+      </figure>
+
+      <section class="footer footerRegister">
+        <img src="images/Nombre-Arista.png" id="aristaImg" alt="" />
+        <figure>
+          <img src="images/facebook.png" alt="">
+          <img src="images/twitter.png" alt="">
+        </figure>
       </section>
 
     </div>

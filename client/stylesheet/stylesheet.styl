@@ -1,117 +1,251 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 @import url(http://fonts.googleapis.com/css?family=Arimo:400,700);
 dt = 0.75s
+
+html, #slides
+  overflow hidden
+
+html, body, #slides, .slideElem
+  height 100% !important
+
+#slides
+  max-width 100% !important
+  min-width 100% !important
 body
   margin 0
   padding 0
-  background: #283872;
+  background: #FFF;
   transition: background dt linear;
   -webkit-transition: background dt linear;
   -moz-transition: background dt linear;
   font-family: 'Montserrat', sans-serif;
 
-#dotSection
-  position relative
-  display flex
-  flex-direction row
-  justify-content space-around
-  align-items center
-  margin 0 auto
-  width 50%
-  top 30px
-  img
-    width 100%
-    position absolute
-    top 9px
-    left 0
-    z-index -1
-  .selected
-    height: 30px !important
-    width: 30px !important
-  .dots
-    background-color yellow
-    border-radius 200px
-    height 10px
-    width 10px
-    display inline-block
-    margin 0
-    cursor pointer
-
-#menuBtn
-  font-size 20px
-  color #FFF
-  cursor pointer
-  text-align center
-  margin-top: 30px;
-  #burger
-    color #FFF000
-    display inline-block
-#menu
-  display inline-block
-  position absolute
-  height 100%
-  width 200px
-  right 0
-  top: 0;
-  z-index: 1;
-  nav
-    width 100%
-    height 100%
-    display none
-    background-color #202266
-    ul
-      margin 0
-      padding 0
-      height 100%
-      list-style none
-      display flex
-      flex-direction column
-      justify-content: space-around
-      align-items center
-      li
-        a
-          color #ffffff
-          text-decoration none
-          font-size 1.5em
-        a:hover
-          border-bottom solid
-
-#canvas
-  svg
-    position fixed
-    top 0
-    left 0
-    height 100%
-    width 100%
-    z-index -10
-
-#slides
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-  position absolute
-  z-index -10
-
 .slideElem
-  width: 100%
-  height: 100%
-  display: flex
+  width 100%
+
+#information
+  overflow-y scroll
+  .title
+    margin 10% 35% 0 35%;
+    font-weight bolder
+  .info
+    text-align center
+    margin-top 50px
+    img
+      display inline-block
+    figcaption
+      display inline-block
+      width 22%
+      margin 0 30px
+      text-align justify
+      font-family: 'Arimo', sans-serif;
+      font-size 12pt
+      color #2d2538
+  .app
+    position relative
+    margin: 0 20%;
+    .titleContent
+      background-color #f2bf07
+      display block
+      width 80%
+      margin 50px 0
+      h2
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-size 38pt
+        font-weight 400
+        margin 15px
+    img
+      position absolute
+      top -45px
+      right 0
+    p
+      font-family: 'Arimo', sans-serif;
+      font-size 12pt
+      width 40%
+      text-align justify
+    .features
+      padding-left 18px
+      .feature
+        list-style-image: url('images/dotsY.png');
+        font-family: 'Arimo', sans-serif;
+        font-size 12pt
+  .web
+    position relative
+    margin: 0 20%;
+    .titleContent
+      background-color #d32148
+      display block
+      margin 100px 0 20px 20%;
+      h2
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-size 38pt
+        font-weight 400
+        margin 15px
+        text-align right
+        color #fcfcfc
+    img
+      position absolute
+      top -45px
+      left 0
+    article
+      font-family: 'Arimo', sans-serif;
+      font-size 12pt
+      float right
+      width 40%
+      .features
+        padding-left 18px
+        margin-bottom: 80px;
+        li
+          list-style-image: url('images/dotsR.png');
+          font-family: 'Arimo', sans-serif;
+          font-size 12pt
+#experiences
+  overflow-y scroll
+  .title
+    margin 10% 40% 0 40%;
+    font-weight bolder
+  .title2
+    margin 25px 45% 25px 45%;
+  .aliadosContent
+    margin: 0 auto
+    font-family: 'Arimo', sans-serif;
+    font-size 12pt
+    text-align justify
+    color #5c5658
+    width 40%
+  .projectSelector
+    text-align center
+    li
+      list-style none
+      display inline-block
+  .projectInfo
+    position relative
+    margin: 0 20%;
+    display flex
+    .projectDetail
+      border-bottom solid 10px #00b1cd
+      width: 55%;
+      #projectName
+        background-color #00b1cd
+        padding 10px
+        margin 0
+        font-family: 'Open Sans Condensed', sans-serif
+        font-size 20pt
+        color #f8f9f9
+      #projectContent
+        margin 0
+        padding 20px 10px
+        font-family: 'Arimo', sans-serif;
+        font-size 12pt
+        text-align justify
+      #logoOwner
+        float right
+
+#why
+  overflow-y scroll
+  .title
+    margin 10% 42% 20px 42%;
+
+.dotSection
+  background-color: #adadc9;
+  height 10px
+  width 55%
+  display flex
+  justify-content center
+  align-items center
   position relative
+  top: 8%;
+  margin: 0 auto;
+  border-radius: 10px
+  .dotsContent
+    display flex
+    flex-direction row
+    justify-content space-around
+    align-items center
+    width: 100%;
+    position: relative;
+    .selected
+      height: 30px !important
+      width: 30px !important
+    .dots
+      height: 15px
+      width: 15px
+      display inline-block
+      margin 0
+      cursor pointer
+      z-index 1
+.title
+  font-family: 'Open Sans Condensed', sans-serif;
+  text-align: center;
+  margin 10% 44% 0 44%
+  padding-bottom 12px
+  border-bottom solid 3px #7b7b7b
+  color #494848
 
-#tituloHG
-  margin auto
-  border-radius .5em
-  background-color #F10000
-  z-index 1
+.reasons
+  margin 0 20%
+  .reason
+    width 41%
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img
+      width 112px
+    .reasonTitle
+      font-family: 'Open Sans Condensed', sans-serif;
+      font-size 24pt
+      font-weight bolder
+      color #211841
+      align-self baseline
+    .reasonContent
+      font-family: 'Arimo', sans-serif;
+      font-size 12pt
+      color #5b595d
 
-  h1
-    margin .125em .4em
-    font-size 4.5em
-    color #ffffff
-    z-index 4
-
-    span
-      font-size .4em
+.video
+  position relative
+  width 100%
+  display flex
+  flex-direction column
+  justify-content center
+  align-items center
+  margin-bottom 30px
+  iframe
+    margin: 30px 0 60px 0;
+  .greyZone
+    height: 130px;
+    background-color: #e7e5f0;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    p
+      font-family: 'Open Sans Condensed', sans-serif;
+      font-size 19pt
+      font-weight bolder
+      position absolute
+      bottom 0px
+      left: 46%
+      color #211841
+.footer
+  background-color #211841
+  display: flex;
+  flex-direction: column;
+  height: 14%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-bottom solid 10px #9d9acb
+  width 100%
+  margin-top 30px
+  .nameImg
+    width 130px
+    margin 15px 0
+  .barraImg
+    width: 100%;
+    position: absolute;
+    bottom: 0;
 
 aside[id="slides-control"] .slidr-control.right
   width: 50px !important;
@@ -139,32 +273,65 @@ aside[id="slides-control"] .slidr-control.left
 .slidr-control.down
   display: none !important
 
-#arista
-  height 100%
+#home
+  border-top 10px solid #423473
+  border-bottom 10px solid #423473
+
+#aristaLogo
+  background-color #cbc8d7
+  height 50%
   width 100%
   display flex
   flex-direction row
   justify-content center
   align-items center
-#registro
+  img
+    width 30%
+.aristaInfo
+  display flex
+  flex-direction column
+  justify-content center
+  align-items center
+  height 48%
+  border-bottom: solid 17px #423473
+  h2
+    width 10%
+    text-align center
+    color #302444
+    border-bottom solid #302444
+  .descargaMarcador, .descargarPortafolio
+    border solid #312444
+    color #312444
+    cursor pointer
+    padding 5px
+    display inline-block
+  .descargaMarcador:hover, .descargarPortafolio:hover
+    color #FFF
+    background-color #312444
+#register
   display flex !important
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  padding-top 50px
+  border-top solid 10px #33266b
   .titleRegister
     display inline-block
-    background-color #d3d2d1
-    border-bottom solid #5AB3D2
+    background-color #dcd9d9
+    border-bottom solid #64b4d6
     padding 5px 40px
     font-family: 'Open Sans Condensed', sans-serif;
+    color #211841
+    font-weight bolder
     figcaption
       font-size 17pt
   .benefits
-    width 350px
-    color #FFF
+    width 300px
+    color #514a4e
     list-style-image: url('images/dots.png');
     font-family: 'Arimo', sans-serif;
-    font-size 10pt
+    font-size 12pt
+    padding-left 16px
     .singleBenefit
       margin 8px 0
   #sendMessage
@@ -173,34 +340,40 @@ aside[id="slides-control"] .slidr-control.left
     .campo
       font-family: 'Arimo', sans-serif;
       font-size 11pt
-      width 350px
+      width 300px
       display block
       padding 5px
       margin 5px 0
       border none
-      border-top solid #5AB3D2
-      border-left solid #5AB3D2
+      background-color #ecebf6
+      border-top solid #64b4d6
+      border-left solid #64b4d6
     .campo::-webkit-input-placeholder
-      color #000
+      color #878786
     #registrar
       font-family: 'Arimo', sans-serif;
-      font-size 17pt
+      font-size 12pt
       text-align center
-      color #E3E559
+      color #f7b209
       font-weight bold
-      border solid #E3E559
+      border 1px solid #f7b209
       border-radius 15px
       margin: 10px auto;
       padding 5px
       cursor pointer
     #registrar:hover
-      background-color #E3E559
-      color #FFF
-  #aristaBottom
-    display: flex;
-    background-color: #221942;
-    width: inherit;
-    height: 20%;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+      background-color #f7b209
+      color #f3eff2
+      border-color #f7b209
+
+.footerRegister
+  width 100%
+  height 30%
+  border-bottom solid 60px  #9d9acb
+  figure
+    img
+      height 30px
+      margin 0 10px
+.appBadges
+  img
+    height 40px
